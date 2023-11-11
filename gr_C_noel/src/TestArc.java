@@ -71,5 +71,31 @@ public class TestArc {
 		assertEquals("arc doit toujours faire 3 degats", 3, arc.getDegats());
 		assertEquals("arc doit toujours avoir 4 fleches", 4, arc.getFleches());
 	}
+	/**
+	 * quand utiliser prend un nb négatif
+	 */
+	public void test_utiliser_negatif() {
+		// preparation des donnees
+		Arc arc = new Arc(3,0);
+
+		// methode testee
+		arc.utiliser();
+
+		// verifications
+		assertEquals("arc doit toujours avoir 0 fleches", 0, arc.getFleches());
+	}
+	/**
+	 * test méthode to string 
+	 */
+	public void test_utiliser_negatif() {
+		// preparation des donnees
+		Arc arc = new Arc(3,5);
+
+		// methode testee
+		arc.toString();
+
+		// verifications
+		assertEquals("la chaine doit être écrite correctement",-arc(d:3,f:5), arc.toString());
+	}
 	//... autres tests de la classe Arc
 }

@@ -33,13 +33,13 @@ public class Arc{
     /**métohde qui retourne
      * les dégats */    
     public int getDegats(){
-        return degats;
+        return this.degats;
     }
     /**méthode qui retourne 
      * le nombre de flèches
      */
     public int getFleches(){
-        return fleches;
+        return this.fleches;
     }
 
     //4.4 Autres Methodes 
@@ -52,7 +52,7 @@ public class Arc{
         }
     }
     /**méthode qui réduit le nb de flèches
-     * de 1 quand uen flèche est utilisée
+     * de 1 quand une flèche est utilisée
      */
     public int utiliser(){
         if (fleches>0){
