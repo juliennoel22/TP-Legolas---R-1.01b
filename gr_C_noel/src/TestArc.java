@@ -57,6 +57,19 @@ public class TestArc {
 		assertEquals("arc doit toujours avoir 5 fleches", 5, arc.getFleches());
 	}
 
+	/**
+	 * quand l'arc utlise une flèche
+	 */
+	public void test_utiliser_OK() {
+		// preparation des donnees
+		Arc arc = new Arc(3,5);
 
+		// methode testee
+		arc.utiliser();
+
+		// verifications
+		assertEquals("arc doit toujours faire 3 degats", 3, arc.getDegats());
+		assertEquals("arc doit toujours avoir 4 fleches", 4, arc.getFleches());
+	}
 	//... autres tests de la classe Arc
 }

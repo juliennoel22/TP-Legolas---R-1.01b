@@ -54,7 +54,7 @@ public class Arc{
     /**méthode qui réduit le nb de flèches
      * de 1 quand uen flèche est utilisée
      */
-    public int utiliser{
+    public int utiliser(){
         if (fleches>0){
         this.fleches -= 1;
         return degats;
@@ -67,8 +67,8 @@ public class Arc{
      * forme suivante :
      * "-arc(d:degats,f:fleches )"
      */
-    public char toString{
-        return "-arc(d:"+ degats+",f:"+ fleches")";
+    public String toString() {
+        return "-arc(d:" + degats + ",f:" + fleches + ")";
     }
 
     //4.5 Tests
