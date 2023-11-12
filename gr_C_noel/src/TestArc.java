@@ -85,9 +85,9 @@ public class TestArc {
 		assertEquals("arc doit toujours avoir 0 fleches", 0, arc.getFleches());
 	}
 	/**
-	 * test méthode to string 
+	 * test méthode toString 
 	 */
-	public void test_utiliser_negatif() {
+	public void test_toString() {
 		// preparation des donnees
 		Arc arc = new Arc(3,5);
 
@@ -95,7 +95,7 @@ public class TestArc {
 		arc.toString();
 
 		// verifications
-		assertEquals("la chaine doit être écrite correctement",-arc(d:3,f:5), arc.toString());
+		assertEquals("la chaine doit être écrite correctement","-arc(d:3,f:5)", arc.toString());
 	}
 	//... autres tests de la classe Arc
 }

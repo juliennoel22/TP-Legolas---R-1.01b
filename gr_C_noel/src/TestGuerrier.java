@@ -41,7 +41,19 @@ public class TestGuerrier {
 
 		String guerrierS = guerrier.toString();
 	}
+	/**
+	 * test getPv
+	 */
+	public void test_getPv() {
+		// preparation des donnees
+		Guerrier guerrier = new Guerrier("nom");
 
+		// methode testee
+		arc.utiliser();
+
+		// verifications
+		assertEquals("arc doit toujours avoir 0 fleches", 0, arc.getFleches());
+	}
 
 
 

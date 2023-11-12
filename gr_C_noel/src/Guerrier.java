@@ -30,7 +30,7 @@ public class Guerrier{
     
     
     public boolean etreBlesse(){
-        if this.pv= 0 {
+        if (this.pv == 0) {
             return true;
         } else {
             return false;
@@ -48,20 +48,20 @@ public class Guerrier{
         }
     }
     public boolean prendreArc (Arc arc){
-        if this.pv > 0 {
-            if this.arc == null{
+        if (this.pv > 0) {
+            if (this.arc == null){
                 this.arc = arc;
                 return true;
             }
             else  {
                 this.arc = this.arc;
-                return false
+                return false;
             }
         } else {
             return false;
         }
     }
-    public Arc poserArc{
+    public Arc poserArc(){
         if (this.pv > 0) {
             if (this.arc == null){
                 return null;
@@ -81,7 +81,7 @@ public class Guerrier{
             if (this.arc == null){
                 return false;
             } else {
-                int degats = this.arc.utliser();
+                int degats = this.arc.utiliser();
                 if (degats > 0){
                     victime.subirDegat(degats);
                     return true;
@@ -89,13 +89,15 @@ public class Guerrier{
                     return false;
                 }
             }
+        } else {
+            return false;
         }
     }
-    public String toString{
+    public String toString(){
         if (this.arc == null){
-            return this.nom+"("+this.pv+")"
+            return this.nom+"("+this.pv+")";
         } else {
-            return this.nom+"("+this.pv+")-arc(d:)"+this.arc.degats+",f:"+this.arc.fleches+")";
+            return this.nom + "(" + this.pv + ")-" + this.arc.toString();
         }
 
     }
