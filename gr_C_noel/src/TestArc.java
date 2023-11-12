@@ -21,14 +21,19 @@ public class TestArc {
 		Arc arc = new Arc(3,5);
 		assertEquals("ordre parametres est mauvais",3,arc.getDegats());
 		assertEquals("ordre parametres est mauvais",5,arc.getFleches());
-
+		
 		arc.recharger(5);
 		int dg = arc.utiliser();
 		String s = arc.toString();
 	}
 
+	// recharger l'arc : 
+	// - nb fleches > 0
+	// - nb fleches <= 0
+	// ON TESTE POUR FLECHES = 0 ??????
+
 	/**
-	 * quand l'arc est recharge correctement
+	 * quand l'arc est recharge correctement (fleches >= 0)
 	 */
 	public void test_recharger_OK() {
 		// preparation des donnees
@@ -43,7 +48,7 @@ public class TestArc {
 	}
 
 	/**
-	 * quand l'arc est recharge avec un nombre de fleches negatif
+	 * quand l'arc est recharge avec un nombre de fleches negatif 
 	 */
 	public void test_recharger_negatif() {
 		// preparation des donnees
@@ -57,6 +62,10 @@ public class TestArc {
 		assertEquals("arc doit toujours avoir 5 fleches", 5, arc.getFleches());
 	}
 
+	
+	// utiliser l'arc :
+	// - fleches > 0
+	// - fleches <= 0
 	/**
 	 * quand l'arc utlise une flèche
 	 */
@@ -72,7 +81,7 @@ public class TestArc {
 		assertEquals("arc doit toujours avoir 4 fleches", 4, arc.getFleches());
 	}
 	/**
-	 * quand utiliser prend un nb négatif
+	 * quand utiliser prend un nb négatif ou nul pour fleches
 	 */
 	public void test_utiliser_negatif() {
 		// preparation des donnees
@@ -97,5 +106,4 @@ public class TestArc {
 		// verifications
 		assertEquals("la chaine doit être écrite correctement","-arc(d:3,f:5)", arc.toString());
 	}
-	//... autres tests de la classe Arc
 }

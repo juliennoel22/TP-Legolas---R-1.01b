@@ -16,7 +16,7 @@ public class Arc{
     /**un constructeur avec deux 
      * param`etres entiers dg et fl qui 
      * construit un arc
-     * faisant dg d ́egats et poss ́edant 
+     * faisant dg d ́egats et possedant 
      * fl fl`eches */ 
     public Arc(int dg, int fl){
         if (dg < 0) {
@@ -47,7 +47,9 @@ public class Arc{
      * de flèches avec un nombre > à 0
      *  */
     public void recharger(int nFleches){
-        if (nFleches>0){
+        if (nFleches<0){
+            this.fleches = this.fleches;
+        } else {
             this.fleches += nFleches;
         }
     }
@@ -70,9 +72,5 @@ public class Arc{
     public String toString() {
         return "-arc(d:" + degats + ",f:" + fleches + ")";
     }
-
-    //4.5 Tests
-    
-
 
 }

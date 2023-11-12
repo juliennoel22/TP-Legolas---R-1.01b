@@ -18,14 +18,14 @@ public class Guerrier{
         }
         this.arc = null;
     }
-    public String getNom(){
-        return this.nom;
-    }
     public int getPv(){
         return this.pv;
     }
     public Arc getArc(){
         return this.arc;
+    }
+    public String getNom(){
+        return this.nom;
     }
     
     
