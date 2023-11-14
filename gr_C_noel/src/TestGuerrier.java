@@ -49,11 +49,6 @@ public class TestGuerrier {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Toto");
 
-		// methode testee
-		guerrier.getNom();
-		guerrier.getPv();
-		guerrier.getArc();
-
 		// verifications
 		assertEquals("Le nom du guerrier doit être Toto", "Toto", guerrier.getNom());
 		assertEquals("Les Pvs du gerrier doivent être égal à 10", 10, guerrier.getPv());
@@ -68,11 +63,6 @@ public class TestGuerrier {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Toto", -7);
 
-		// methode testee
-		guerrier.getNom();
-		guerrier.getPv();
-		guerrier.getArc();
-
 		// verifications
 		assertEquals("Le nom du guerrier doit être Toto", "Toto", guerrier.getNom());
 		assertEquals("Les Pvs du gerrier doivent être égal à 1", 1, guerrier.getPv());
@@ -86,71 +76,13 @@ public class TestGuerrier {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Toto", 7);
 
-		// methode testee
-		guerrier.getNom();
-		guerrier.getPv();
-		guerrier.getArc();
-
 		// verifications
 		assertEquals("Le nom du guerrier doit être Toto", "Toto", guerrier.getNom());
 		assertEquals("Les Pvs du gerrier doivent être égal à 7", 7, guerrier.getPv());
 		assertEquals("Le guerrier ne doit pas avoir d'arc", null, guerrier.getArc());
 	}
 
-	/**
-	 * test de la méthode getPv
-	 */
-	public void  test_getPv(){
-		// preparation des donnees
-		Guerrier guerrier = new Guerrier("Toto",10);
-
-		// methode testee
-		guerrier.getPv();
-
-		// verifications
-		assertEquals("ca doit retourner 10pv", 10, guerrier.getPv());
-	}
-	/**
-	 * Test getArc quand le guerrier n'a pas d'arc
-	 */
-	public void  test_getArc_null(){
-		// preparation des donnees
-		Guerrier guerrier = new Guerrier("Toto");
-
-		// methode testee
-		guerrier.getArc();
-
-		// verifications
-		assertEquals("le guerrier ne doit aps avoir d'arc", null, guerrier.getArc());
-	}
-	/**
-	 * Test getArc quand le guerrier a un arc
-	 */
-	public void  test_getArc(){
-		// preparation des donnees
-		Guerrier guerrier = new Guerrier("Toto");
-		Arc arc = new Arc(3,5);
-		guerrier.prendreArc(arc);
-
-		// methode testee
-		guerrier.getArc();
-
-		// verifications
-		assertEquals("le guerrier doit avoir un arc avec 5 de dégats et 3 fleches", arc, guerrier.getArc());
-	}
-	/**
-	 * Test getNom
-	 */
-	public void  test_getNom(){
-		// preparation des donnees
-		Guerrier guerrier = new Guerrier("Toto");
-
-		// methode testee
-		guerrier.getNom();
-
-		// verifications
-		assertEquals("le guerrier doit avoir le nom de Toto", "Toto", guerrier.getNom());
-	}
+	
 
 	/**
 	 * Test de la méthode etreBlesse de Guerrier 
@@ -160,9 +92,6 @@ public class TestGuerrier {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Toto",1);
 		guerrier.subirDegat(1) ;
-
-		// methode testee
-		guerrier.etreBlesse();
 
 		// verifications
 		assertEquals("le guerrier doit être blessé", true, guerrier.etreBlesse());
@@ -175,9 +104,6 @@ public class TestGuerrier {
 	public void  test_EtreBlesse_PVPASZERO(){
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Toto",1);
-
-		// methode testee
-		guerrier.etreBlesse();
 
 		// verifications
 		assertEquals("le guerrier ne doit pas être blessé", false, guerrier.etreBlesse());
@@ -423,7 +349,7 @@ public class TestGuerrier {
 
 
 		// verifications
-		assertEquals("le guerrier n'a pas ce nombre de PV ou n'a pas le bon nom ou l'arc n'a pas ce nombre de flèches ou il n'infliges pas ce nombre de dégats", "Toto(1)--arc(d:3,f:5)", guerrier.toString());
+		assertEquals("le guerrier n'a pas ce nombre de PV ou n'a pas le bon nom ou l'arc n'a pas ce nombre de flèches ou il n'infliges pas ce nombre de dégats", "Toto(1)-arc(d:3,f:5)", guerrier.toString());
 	}
 
 

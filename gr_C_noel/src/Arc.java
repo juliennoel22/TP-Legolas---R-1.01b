@@ -4,9 +4,9 @@ public class Arc{
 
     //
     /**
-     * Constructeur sans paramètre
-     * qui construit un arc par défaut 
-     * (avec 5 dégats et 3 flèches)
+     * Constructeur sans parametre
+     * qui construit un arc par defaut 
+     * (avec 5 degats et 3 fleches)
      */
     public Arc(){
         this.degats=5;
@@ -15,12 +15,12 @@ public class Arc{
 
 
     /**un constructeur avec deux 
-     * param`etres entiers dg et fl qui 
+     * parametres entiers dg et fl qui 
      * construit un arc
-     * faisant dg d ́egats et possedant 
-     * fl fl`eches 
-     * @param dg dégats
-     * @param fl nombre de flèches
+     * faisant dg degats et possedant 
+     * fl fleches 
+     * @param dg degats
+     * @param fl nombre de fleches
      * 
      */ 
     public Arc(int dg, int fl){
@@ -36,36 +36,37 @@ public class Arc{
         this.fleches=fl;
         }
     }
-    /**métohde qui retourne
-     * les dégats causés par l'arc lors d'un tir
-     * @return dégats causés par l'arc lors d'un tir
+    /**methode qui retourne
+     * les degats causes par l'arc lors d'un tir
+     * @return degats causes par l'arc lors d'un tir
      */    
     public int getDegats(){
         return this.degats;
     }
-    /**méthode qui retourne 
-     * le nombre de flèches disponibles
-     * @return le nombre de flèches disponibles
+    /**methode qui retourne 
+     * le nombre de fleches disponibles
+     * @return le nombre de fleches disponibles
      */
     public int getFleches(){
         return this.fleches;
     }
 
     //4.4 Autres Methodes 
-    /** méthode pour recharger le nombre 
-     * de flèches avec un nombre > à 0
-     * @param nFleches nombre de flèches à ajouter au stock de flèches
+    /** methode pour recharger le nombre 
+     * de fleches avec un nombre > a 0
+     * @param nFleches nombre de fleches a ajouter au stock de fleches
      */
     public void recharger(int nFleches){
         if (nFleches<=0){
             this.fleches = this.fleches;
         } else {
             this.fleches += nFleches;
+            
         }
     }
-    /**méthode qui réduit le nb de flèches
-     * de 1 quand une flèche est utilisée
-     * @return le nombre de dégats causés par l'arc lors de son utilisation
+    /**methode qui reduit le nb de fleches
+     * de 1 quand une fleche est utilisee
+     * @return le nombre de degats causes par l'arc lors de son utilisation
      */
     public int utiliser(){
         if (fleches>0){
@@ -76,10 +77,10 @@ public class Arc{
             return 0;
         }
     }
-    /**méthode qui retourne un message sous la 
+    /**methode qui retourne un message sous la 
      * forme suivante :
      * "-arc(d:degats,f:fleches )"
-     * @return une chaine de caractère sous la forme "-arc(d:degats,f:fleches )"
+     * @return une chaine de caractere sous la forme "-arc(d:degats,f:fleches )"
      */
     public String toString() {
         return "-arc(d:" + degats + ",f:" + fleches + ")";
